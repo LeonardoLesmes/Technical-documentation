@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500&family=Poppins:wght@100;200;300;400&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="https://cdn0.iconfinder.com/data/icons/ikonate/48/code-alt-512.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <title>C++ Documentation</title>
+</head>
+
+
+
+<body>
+    <nav id="navbar">
+        <header id="title-page">
+            <h1>C++ Documentation</h1>
+        </header>        
+        <a href="#Introduction" class="nav-link">Introduction</a>
+        <a href="#Getting_started" class="nav-link">Getting started</a>
+        <a href="#Data_types_and_variables" class="nav-link">Data types and variables</a>
+        <a href="#Decisions_statements" class="nav-link">Decisions statements</a>
+        <a href="#Loop_statement" class="nav-link">Loop statement</a>
+    </nav>
+    <main id="main-doc">
+        <section class="main-section" id="Introduction">
+            <header>
+                <h1>Introduction</h1>
+            </header>
+            <p>C++ is a general-purpose compiled programming language. It is generally used in applications where speed,
+                efficiency and thorough control of computer resources is needed, this means that it is suitable for
+                applications such as: operating systems development, video game development, embedded systems
+                development, among others. This ability to work closely with the hardware is why it is called low-level
+                programming language.</p>
+
+            <p>C++ is an extension of the programming language called C, adding new features such as the ability to
+                structure programs through an object-oriented paradigm. It is an extension of the programming language
+                called C, adding new features such as the ability to structure programs using an object-oriented
+                paradigm. It also brought with it new things like:
+            </p>
+            <ul>
+                <li><b>STL - Standard Template Library: </b>It provides template classes for commonly used data
+                    structures and components for implementing added, built-in functionality. One such component is
+                    containers such as Vectors, that store collections of objects.</li>
+                <li><b>Namespaces: </b>They are containers used to organize code into logical groups of identifiers and
+                    similar objects under a name, within a scope. They prevent name colisions when multiple libraries
+                    are present, and prevent conflict with names of other namespaces within a program.</li>
+                <li><b>Exception handing: </b>C++ supports exception handling by introducing <code>try</code> and
+                    <code>catch</code> blocks.
+                </li>
+            </ul>
+            <p>All these new options make software written in C++ more scalable and maintainable without losing speed
+                and efficiency. The information of this section was get from this <a
+                    href="https://www.freecodecamp.org/news/c-vs-cpp-whats-the-difference/" target="_blank">FreeCodeCamp
+                    entry</a>.</p>
+        </section>
+        <section class="main-section" id="Getting_started">
+            <header>
+                <h1>Getting started</h1>
+            </header>
+            <h2>Macros</h2>
+            <p>Macros are directives for the preprocessor. They allow the programmer to work with different libraries,
+                define constants, define reduced statements, create custom functions, control how the program is
+                compiled according to certain software and/or hardware characteristics, define which version of C++ the
+                script will be compiled with, among many other things.</p>
+
+            <p>One of the simplest but most important macros will be presented in this documentation. This macro is
+                called <code>#include</code> which will allow us to include libraries to use different functions, such
+                as reading data entered from the keyboard, as well as displaying this data through the system console.
+                To use the library with the functions described above, the following code is used: </p>
+
+            <section id="code">
+                <code id="macros">#include </code><code id="text">&#60;iostream&#62; </code>
+            </section>
+
+            <p>You can read the following documentation about <a
+                    href="https://www.ibm.com/docs/en/xl-c-and-cpp-aix/13.1.0?topic=reference-standard-library-header-files"
+                    target="_blank">C++ standard libraries</a> for more information on all the existing libraries for
+                this programming language.
+            </p>
+
+            <h2>Namespace <code>std</code></h2>
+            <p>As described above, namespaces are containers used to organize code into logical groups of identifiers
+                and similar objects under a name. One of the most used namespaces is <code>std</code>, in it are grouped
+                a great variety of functions, among them those of reading data and printing data on the screen. Its
+                syntax is as follows:</p>
+            <section id="code">
+                <code id="macros">using </code><code id="data_type"> namespace</code><code id="objects"> std</code>
+            </section>
+            <p>To use it, you only have to invoke the name of the function you want to access. For example, if you want
+                to print a text on the screen, you would use the following statement:
+            </p>
+            <section id="code">
+                <code id="variable">cout </code><code id="functions">&#60;&#60; </code><code
+                    id="text">Hello world!</code><code>;</code>
+            </section>
+            <p>If the use of the workspace were not defined, every time you want to use a function belonging to it, you
+                would have to use the following statement:</p>
+            <section id="code">
+                <code id="objects">std </code><code>:: </code><code id="variable">cout </code><code
+                    id="functions">&#60&#60 </code><code id="text">Hello world!</code><code>;</code>
+            </section>
+            <p>Therefore, it is always advisable to define the use of the namespace at the beginning of the program.</p>
+
+            <h2>Main function</h2>
+            <p>The main function is the place where the program is going to start executing, it must always be present
+                in any program written in C++. Its syntax is as follows:</p>
+            <section id="code">
+                <code id="data_type">int </code><code id="functions">main</code><code>()</code>
+                <br>
+                <code>{</code>
+                <br>
+                <br>
+                <code id="macros">&nbsp;&nbsp;&nbsp;return </code><code>0;</code>
+                <br>
+                <code>}</code>
+            </section>
+            <p>You can see how at the end of the main function there is a return 0, it is a directive of the functions
+                that we are not going to see in this documentation but basically tells the compiler that the program was
+                executed correctly (only in the case of the main function).</p>
+
+            <h2>Comments</h2>
+            <p>Comments are lines that are not taken into account when compiling the program, i.e. they have no effect
+                on the execution of the software. This is a great help because you can leave text in the program to
+                describe the operation of parts of the code, explain what certain variables and functions are used for,
+                among other things. Comments are mainly divided into two types: <b>single-line</b> and
+                <b>multi-line</b>. The syntax is as follows:
+            </p>
+            <section id="code">
+                <code id="commentary">// This is a single-line commentary</code>
+                <br>
+                <br>
+                <code id="commentary">/* This is a </code>
+                <br>
+                <code id="commentary">&nbsp;&nbsp; multi-line </code>
+                <br>
+                <code id="commentary">&nbsp;&nbsp; commentary */</code>
+            </section>
+
+            <h2>Example</h2>
+            <p>Having seen the main components of a C++ program, we will show an example of a program that prints the
+                phrase "Hello world!". The code is as follows:</p>
+            <section id="code">
+                <code id="macros">#include </code><code id="text">&#60;iostream&#62; </code>
+                <br>
+                <br>
+                <code id="macros">using </code><code id="data_type"> namespace</code><code id="objects"> std</code>
+                <br>
+                <br>
+                <code id="commentary">// This program print a text on the console</code>
+                <br>
+                <code id="data_type">int </code><code id="functions">main</code><code>()</code>
+                <br>
+                <code>{</code>
+                <br>
+                <code id="variable">&nbsp;&nbsp;&nbsp;cout </code><code id="functions">&#60;&#60; </code><code
+                    id="text">Hello world!</code><code>;</code>
+                <br>
+                <code id="macros">&nbsp;&nbsp;&nbsp;return </code><code>0;</code>
+                <br>
+                <code>}</code>
+            </section>
+        </section>
+        <section class="main-section" id="Data_types_and_variables">
+            <header>
+                <h1>Data types and variables</h1>
+            </header>
+            <p>C++ has a large number of data types for classify information, this information is stored in a variable.
+                A variable has a value and a data type associated with it. The most common ones and ther form of use are
+                shown below:</p>
+            <ul id="list-code">
+                <li>
+                    <b>bool:</b> A data type to represent true or false.
+                    <section id="code">
+                        <code id="data_type">bool </code><code id="variable">led </code><code>= </code><code
+                            id="data_type">true</code><code>;</code>
+                    </section>
+                </li>
+                <li>
+                    <b>char:</b> A data type asocciated with characters. char:
+                    <section id="code">
+                        <code id="data_type">char </code><code id="variable">letter </code><code>= </code></code
+                            id="text"><code>'a';</code>
+                    </section>
+                </li>
+                <li>
+                    <b>double:</b> A data type asocciated with large decimal numbers.
+                    <section id="code">
+                        <code id="data_type">double </code><code
+                            id="variable">PI </code><code>= 3.14159265358979323846264;</code>
+                    </section>
+                </li>
+                <li>
+                    <b>float:</b> A data type asocciated with decimal numbers.
+                    <section id="code">
+                        <code id="data_type">float </code><code id="variable">PI </code><code>= 3.141592653;</code>
+                    </section>
+                </li>
+                <li>
+                    <b>int:</b> A data type asocciated with integers numbers.
+                    <section id="code">
+                        <code id="data_type">int </code><code id="variable">humanity_age </code><code>= 350000;</code>
+                    </section>
+                </li>
+            </ul>
+            <p>These data types have a maximum capacity of information they can store. This capacity is measured in
+                bytes (one byte is 8 bits). Below is the maximum value that can be stored in each of the data types
+                seen. </p>
+            <ul>
+                <li><b>bool: </b>(1 byte) = -128 to +128</li>
+                <li><b>char: </b>(1 byte) = 0 to 255</li>
+                <li><b>double: </b>(8 bytes) = 1.7e-308 to 1.7e+308</li>
+                <li><b>float: </b> (4 bytes) = 3.4e-38 to 3.4e+38</li>
+                <li><b>int: </b>(4 bytes) = -2147483648 to +2147483648</li>
+            </ul>
+            <p>Depending on the application to be given to the variables, the appropriate data type must be chosen,
+                taking into account both the size of the information to be handled and the required precision.</p>
+            <h2>Example</h2>
+            <p> A single example of declarations and asignations of variables.</p>
+            <section id="code">
+                <code id="macros">#include </code><code id="text">&#60;iostream&#62; </code>
+                <br>
+                <br>
+                <code id="macros">using </code><code id="data_type"> namespace</code><code id="objects"> std</code>
+                <br>
+                <br>
+                <code id="data_type">int </code><code id="functions">main</code><code>()</code>
+                <br>
+                <code>{</code>
+                <br>
+                <code id="data_type">&nbsp;&nbsp;&nbsp;int </code><code id="variable">age</code><code>;</code>
+                <br>
+                <code id="variable">&nbsp;&nbsp;&nbsp;age </code><code>= 24;</code>
+                <br>
+                <br>
+                <code id="data_type">&nbsp;&nbsp;&nbsp;float </code><code id="variable">grade</code><code>;</code>
+                <br>
+                <code id="variable">&nbsp;&nbsp;&nbsp;grade </code><code>= 5.0;</code>
+                <br>
+                <br>
+                <code id="macros">&nbsp;&nbsp;&nbsp;return </code><code>0;</code>
+                <br>
+                <code>}</code>
+            </section>
+        </section>
+        <section class="main-section" id="Decisions_statements">
+            <header>
+                <h1>Decisions statements</h1>
+            </header>
+
+            <p>Decision statements are parts of the program that, given certain conditions, allow the program to execute
+                a given section. The following are the most common decision statements. </p>
+            <ul id="list-code">
+                <li>
+                    <b>if (condition): </b>This statement executes a block of code if the condition inside the
+                    parentheses is true.
+                    <section id="code">
+                        <code id="data_type">if </code><code>(</code><code id="macros">condition</code><code>)</code>
+                        <br>
+                        <code>{</code>
+                        <br>
+                        <code id="commentary">&nbsp;&nbsp;&nbsp;// Code block to execute</code>
+                        <br>
+                        <code>}</code>
+                    </section>
+                </li>
+                <li>
+                    <b>else: </b> This statement must go together with an if statement, when the condition of the if
+                    statement is not true, the code block assigned to the else statement is executed.
+                    <section id="code">
+                        <code id="data_type">if </code><code>(</code><code id="macros">condition</code><code>)</code>
+                        <br>
+                        <code>{</code>
+                        <br>
+                        <code id="commentary">&nbsp;&nbsp;&nbsp;// Code block to execute</code>
+                        <br>
+                        <code>}</code>
+                        <br>
+                        <code id="data_type">else</code>
+                        <br>
+                        <code>{</code>
+                        <br>
+                        <code
+                            id="commentary">&nbsp;&nbsp;&nbsp;// Code block to execute when condition of if is false</code>
+                        <br>
+                        <code>}</code>
+                    </section>
+                </li>
+                <li>
+                    <b>else if (condition): </b> This statement works similar to the else statement, it is executed when
+                    the condition of the if statement is not true, but it also has its own condition to be executed.
+                    This means that it requires two conditions to be executed, an if with a false condition and the else
+                    if condition is true.
+                    <section id="code">
+                        <code id="data_type">if </code><code>(</code><code id="macros">condition</code><code>) </code>
+                        <br>
+                        <code>{</code>
+                        <br>
+                        <code id="commentary">&nbsp;&nbsp;&nbsp;// Code block to execute</code>
+                        <br>
+                        <code>}</code>
+                        <br>
+                        <code id="data_type">else if </code><code>(</code><code
+                            id="macros">condition</code><code>)</code>
+                        <br>
+                        <code>{</code>
+                        <br>
+                        <code
+                            id="commentary">&nbsp;&nbsp;&nbsp;/* Code block to execute when condition of if is false</code>
+                        <br>
+                        <code id="commentary">&nbsp;&nbsp; and the condition of the else if is true */</code>
+                        <br>
+                        <code>}</code>
+                    </section>
+                </li>
+            </ul>
+            <h2>Example</h2>
+            <p> A single example to use the conditional statements.</p>
+            <section id="code">
+                <code id="macros">#include </code><code id="text">&#60;iostream&#62; </code>
+                <br>
+                <br>
+                <code id="macros">using </code><code id="data_type"> namespace</code><code id="objects"> std</code>
+                <br>
+                <br>
+                <code id="data_type">int </code><code id="functions">main</code><code>()</code>
+                <br>
+                <code>{</code>
+                <br>
+                <code id="data_type">&nbsp;&nbsp;&nbsp;if </code><code>(</code><code
+                    id="macros">condition</code><code>)</code>
+                <br>
+                <code>&nbsp;&nbsp;&nbsp;{</code>
+                <br>
+                <code id="commentary">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// Code block to execute</code>
+                <br>
+                <code>&nbsp;&nbsp;&nbsp;}</code>
+                <br>
+                <code id="data_type">&nbsp;&nbsp;&nbsp;else if </code><code>(</code><code
+                    id="macros">condition</code><code>) </code>
+                <br>
+                <code>&nbsp;&nbsp;&nbsp;{</code>
+                <br>
+                <code
+                    id="commentary">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/* Code block to execute when condition of if is false</code>
+                <br>
+                <code id="commentary">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; and the condition of the else if is true */</code>
+                <br>
+                <code>&nbsp;&nbsp;&nbsp;}</code>
+                <br>
+                <code id="data_type">&nbsp;&nbsp;&nbsp;else</code>
+                <br>
+                <code>&nbsp;&nbsp;&nbsp;{</code>
+                <br>
+                <code
+                    id="commentary">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// Code block to execute when a condition of any if is false</code>
+                <br>
+                <code>&nbsp;&nbsp;&nbsp;}</code>
+                <br>
+                <br>
+                <code id="macros">&nbsp;&nbsp;&nbsp;return </code><code>0;</code>
+                <br>
+                <code>}</code>
+            </section>
+        </section>
+        <section class="main-section" id="Loop_statement">
+            <header>
+                <h1>Loop statement</h1>
+            </header>
+            <p>Loop statements allow a block of code to be executed a certain number of times, either until a certain
+                condition is met or to be executed indefinitely. The following are the one most common loop statement.
+            </p>
+            <ul id="list-code">
+                <li>
+                    <b>while (condition): </b> This statement executes a code continuously until the condition inside
+                    the parentheses is false.
+                    <section id="code">
+                        <code id="data_type">while </code><code>(</code><code id="macros">condition</code><code>)</code>
+                        <br>
+                        <code>{</code>
+                        <br>
+                        <code id="commentary">&nbsp;&nbsp;&nbsp;// Code block to execute in loop</code>
+                        <br>
+                        <code>}</code>
+                    </section>
+                </li>
+            </ul>
+            <h2>Example</h2>
+            <p>A single example to use the loop statement.</p>
+            <section id="code">
+                <code id="macros">#include </code><code id="text">&#60;iostream&#62; </code>
+                <br>
+                <br>
+                <code id="macros">using </code><code id="data_type"> namespace</code><code id="objects"> std</code>
+                <br>
+                <br>
+                <code id="data_type">int </code><code id="functions">main</code><code>()</code>
+                <br>
+                <code>{</code>
+                <br>
+                <code id="data_type">&nbsp;&nbsp;&nbsp;while </code><code>(</code><code
+                    id="macros">condition</code><code>)</code>
+                <br>
+                <code>&nbsp;&nbsp;&nbsp;{</code>
+                <br>
+                <code id="commentary">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// Code block to execute in loop</code>
+                <br>
+                <code>&nbsp;&nbsp;&nbsp;}</code>
+                <br>
+                <br>
+                <code id="macros">&nbsp;&nbsp;&nbsp;return </code><code>0;</code>
+                <br>
+                <code>}</code>
+            </section>
+            <br>
+            <br>           
+        </section>
+    </main>
+</body>
+</html>
